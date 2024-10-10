@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace DataAccess.Concrete.InMemoryCarDal
 {
@@ -51,6 +52,11 @@ namespace DataAccess.Concrete.InMemoryCarDal
 		public Car GetById(int id)
 		{
 			return _cars.FirstOrDefault(p => p.CarId == id);
+		}
+
+		public List<CarDetailDto> GetCarDetails()
+		{
+			throw new NotImplementedException();
 		}
 
 		public void Update(Car car)

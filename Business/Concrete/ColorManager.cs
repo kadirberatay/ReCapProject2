@@ -20,27 +20,30 @@ namespace Business.Concrete
 
 		public void Add(Color color)
 		{
-			throw new NotImplementedException();
+			_colorDal.Add(color);
+			Console.WriteLine("Renk eklendi...");
 		}
 
 		public void Delete(Color color)
 		{
-			throw new NotImplementedException();
+			_colorDal.Delete(color);
 		}
 
 		public List<Color> GetAll()
 		{
-			throw new NotImplementedException();
+			Console.WriteLine("Araç renkleri listeleniyor...");
+			return _colorDal.GetAll();
 		}
 
 		public Color GetById(int colorId)
 		{
-			throw new NotImplementedException();
+			return _colorDal.Get(c => c.ColorId == colorId);
 		}
 
 		public void Update(Color color)
 		{
-			throw new NotImplementedException();
+			_colorDal.Update(color);
+			Console.WriteLine($"{color.ColorName} güncellendi.");
 		}
 	}
 }

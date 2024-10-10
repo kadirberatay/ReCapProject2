@@ -20,17 +20,19 @@ namespace Business.Concrete
 
 		public void Add(Brand brand)
 		{
-			throw new NotImplementedException();
+			_brandDal.Add(brand);
+			Console.WriteLine("Marka eklendi.");
 		}
 
 		public void Delete(Brand brand)
 		{
-			throw new NotImplementedException();
+			_brandDal.Delete(brand);
 		}
 
 		public List<Brand> GetAll()
 		{
 			return _brandDal.GetAll();
+			Console.WriteLine("Markalar listeleniyor...");
 		}
 
 		public Brand GetById(int brandId)
@@ -40,7 +42,8 @@ namespace Business.Concrete
 
 		public void Update(Brand brand)
 		{
-			throw new NotImplementedException();
+			_brandDal.Update(brand);
+			Console.WriteLine($"{brand.BrandName} güncellendi.");
 		}
 	}
 }
